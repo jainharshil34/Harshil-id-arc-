@@ -1,0 +1,268 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base page styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e0e0, #f8f7f7); 
+}
+
+/* ID Card Styling */
+.id-card {
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    background: url(images/bg.jpg); /* Set image as the background */
+    background-size: cover;
+    background-position: center;
+    color: #050505;
+    border: 2px solid #070110;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35); 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content positioning on top of background elements */
+.card-content, .header {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Card Details Layout */
+.card-details {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    justify-content: space-between;
+}
+
+/* Left Section */
+.left-section {
+    flex: 2;
+    padding: 10px;
+}
+
+.info-section .info {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-size: 16px;
+    color: #0c0601;
+    font-weight: bold;
+    width: 150px;
+    margin-left: 25px;
+}
+
+.colon {
+    font-size: 16px;
+    color: #0c0101;
+    margin-right: 10px;
+}
+
+.value {
+    font-size: 16px;
+    color: #201c1c;
+}
+
+/* Right Section (Profile Photo) */
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+/* Profile Photo Styling */
+.photo {
+    width: 120px;
+    height: 140px;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 5px;
+    margin-top: -300px; 
+    margin-right: 50px;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Signatures Section */
+.signatures-section {
+    position: relative; 
+    height: 60px; 
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* Position left signature */
+.signature-left {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    padding: 5px;
+}
+
+/* Position right signature */
+.signature-right {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    padding: 5px;
+}
+
+.sig-title {
+    margin-bottom: 5px;
+}
+
+.signature img {
+    width: 80px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .id-card {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+   
+
+    .card-details {
+        flex-direction: column;
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .left-section {
+        flex: 1;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .right-section {
+        flex: 1;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        padding-top: 0; 
+        margin-top: 20px; 
+    }
+
+    .photo {
+        width: 100px;
+        height: 120px;
+        margin-top: 0; 
+        margin-bottom: 10px; 
+    }
+
+    .label {
+        width: 130px; 
+        font-size: 14px;
+    }
+
+    .value {
+        font-size: 14px;
+    }
+
+    .card-details .field {
+        margin-bottom: 8px; 
+    }
+
+    .signatures-section {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px; 
+    }
+
+    .signature-left,
+    .signature-right {
+        margin-bottom: 10px; 
+    }
+
+
+
+@media (max-width: 480px) {
+    .id-card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    
+
+    .photo {
+        width: 90px;
+        height: 110px;
+    }
+
+    .label, .value {
+        font-size: 14px;
+    }
+
+    .card-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section {
+        width: 100%;
+    }
+
+    .right-section {
+        width: 100%;
+        justify-content: center; 
+        padding-top: 10px;
+    }
+
+    .signatures-section {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .signature {
+        margin-top: 5px;
+    }
+}
+

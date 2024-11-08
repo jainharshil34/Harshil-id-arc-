@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #ede8e8ee; /* Light gray background */
+}
+
+.id-card {
+    width: 600px; /* Adjusted width for the landscape orientation */
+    height: 400px; /* Height remains constant for a landscape card */
+    padding: 20px;
+    background-color: rgb(242, 49, 49);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ff4d4d; /* Adding a border to emphasize the card */
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    margin-bottom: 10px; /* Space for header */
+}
+
+.logo {
+    width: 100px; /* Increased logo size */
+    margin-bottom: 5px;
+}
+
+.card-details {
+    display: flex; /* Flex layout for card details */
+    position: relative;
+    z-index: 1;
+}
+
+/* Left Section */
+.left-section {
+    flex: 2;
+    padding: 10px; /* Padding for left section */
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Photo Styling */
+.photo {
+    width: 120px; /* Width for photo */
+    height: 140px; /* Height for photo */
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Info Section Styling */
+.info-section {
+    padding-bottom: 10px; /* Space for info section */
+}
+
+.info {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Margin for fields */
+}
+
+.label {
+    font-size: 16px; /* Font size for labels */
+    color: #333;
+    font-weight: bold;
+    width: 150px; /* Increased width for label */
+}
+
+.colon {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.value {
+    font-size: 16px; /* Font size for values */
+    color: #333;
+}
+
+/* Signatures Section Styling */
+.signatures-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px; /* Space above signatures */
+    padding-top: 10px; /* Padding above signatures */
+    border-top: 1px solid #ddd; /* Border above signatures */
+}
+
+.signature {
+    text-align: center;
+    font-size: 12px; /* Font size for signatures */
+    color: #555;
+    padding: 5px;
+    flex: 1; /* Allow signature sections to take equal space */
+}
+
+.sig-title {
+    margin-bottom: 5px; /* Space below signature title */
+}
+
+.signature img {
+    width: 80px; /* Increased width for signature images */
+    height: auto;
+}
+/* Updated card background */
+.id-card {
+    background: linear-gradient(145deg, #444444, #2b2b2b);
+    color: #b0a3a3;
+    border: 2px solid #ff4d4d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Wave overlay for a stylish look */
+.id-card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.15), transparent);
+    clip-path: ellipse(80% 100% at 50% 100%);
+    z-index: 1;
+    opacity: 0.5; /* Lower opacity for a subtle effect */
+}
+
+/* Alumni emblem for a prestigious touch */
+.id-card::after {
+    content: "Alumni";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: rgba(220, 209, 209, 0.03); /* Low opacity for a watermark effect */
+    font-weight: bold;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure content stays on top */
+.card-content, .header {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header enhancements */
+.header h2 {
+    color: #ffcccc;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+
+
+
